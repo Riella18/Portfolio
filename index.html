@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirela Neziri – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo-mn.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="cursor-flower" aria-hidden="true"></div>
+  <canvas id="bg"></canvas>
+
+  <header class="nav">
+    <a class="brand" href="#top"><img src="assets/logo-mn.svg" alt="MN"/></a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#languages">Languages</a>
+      <a href="#certs">Certificates</a>
+      <a href="#education">Education</a>
+      <a href="#play">Play</a>
+      <a class="social" href="https://www.linkedin.com/in/mirela-neziri-16995924a/" target="_blank">LinkedIn <img src="assets/linkedin.svg" alt=""></a>
+      <button class="toggle" id="themeToggle" title="Toggle theme"><img src="assets/moon.svg" alt=""><img src="assets/sun.svg" alt=""></button>
+    </nav>
+  </header>
+
+  <main id="top" class="hero container">
+    <div class="hero-text reveal">
+      <h1 class="name">Mirela Neziri</h1>
+      <p class="kicker">Cybersecurity‑focused Developer</p>
+      <p class="lead">I build reliable back‑ends and love turning data into decisions — now aiming that energy at <b>Cybersecurity</b>.</p>
+      <div class="cta row">
+        <a class="btn primary" href="mailto:mirelaneziri17@gmail.com"><img src="assets/mail.svg"> Email</a>
+        <a class="btn" href="MirelaNeziriCV.pdf" target="_blank">CV (PDF)</a>
+      </div>
+      <div class="chips">
+        <span class="chip">📍 Tirana</span><span class="chip">🐳 Docker</span><span class="chip">🐧 Ubuntu</span><span class="chip">🐘 PHP</span><span class="chip">🗄️ MySQL</span>
+      </div>
+    </div>
+    <div class="hero-portrait reveal">
+      <div class="ring"></div>
+      <img class="portrait" src="assets/profile.jpg" alt="Portrait" onerror="this.style.display='none'">
+    </div>
+  </main>
+
+  <section id="experience" class="section container reveal">
+    <h2>Experience & Skills</h2>
+    <div class="grid three">
+      <article class="card reveal">
+        <h3>PHP Developer · ONLINE NOW SH.P.K.</h3>
+        <p class="muted">Tirana, Albania • Jul 2024 – Feb 2025</p>
+        <ul class="muted">
+          <li>Developed & maintained PHP apps in Docker.</li>
+          <li>Containerized workflows for consistent deploys.</li>
+          <li>Clean, efficient back‑end logic & scripts.</li>
+          <li>Ubuntu, Git, VS Code daily.</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <h3>Data Analyst · ONLINE NOW SH.P.K.</h3>
+        <p class="muted">Tirana, Albania • Jul 2023 – Sep 2023</p>
+        <ul class="muted">
+          <li>Ensured data accuracy, consistency & completeness.</li>
+          <li>Performed clean‑ups and quality checks.</li>
+          <li>Generated reports, organized electronic files.</li>
+        </ul>
+      </article>
+      <article class="card reveal">
+        <h3>Core Skills</h3>
+        <ul class="muted">
+          <li>Networking • Linux & Windows Admin</li>
+          <li>Cybersecurity principles • Defensive coding</li>
+          <li>Docker • PHP • MySQL</li>
+          <li>Teamwork • Communication</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="languages" class="section container reveal">
+    <h2>Languages</h2>
+    <div class="grid three">
+      <div class="card reveal"><strong>Albanian</strong><br><span class="muted">Mother tongue</span></div>
+      <div class="card reveal"><strong>English</strong><br><span class="muted">C2 (L/R/S/W)</span></div>
+      <div class="card reveal"><strong>Italian</strong><br><span class="muted">C2 (L/R/S), C1 (W)</span></div>
+    </div>
+  </section>
+
+  <section id="certs" class="section container reveal">
+    <h2>Certificates</h2>
+    <div class="grid two">
+      <div class="card reveal"><h3>Certified Ethical Hacker (CEH)</h3><p class="muted">EC‑Council — in progress</p></div>
+      <div class="card reveal"><h3>Networking Essentials</h3><p class="muted">Cisco</p></div>
+    </div>
+  </section>
+
+  <section id="education" class="section container reveal">
+    <h2>Education</h2>
+    <div class="grid two">
+      <div class="card reveal">
+        <h3>Bachelor in Software Engineering (ongoing)</h3>
+        <p class="muted">Canadian Institute of Technology (CIT), Tirana • Oct 2023 – Present</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="play" class="section container reveal">
+    <h2>Play: Neon Orb Runner+</h2>
+    <div class="game-wrap">
+      <canvas id="game" width="960" height="560"></canvas>
+      <div class="pane">
+        <div class="score" id="score">Score: 0</div>
+        <p class="muted">Collect <b class="accent">orbs</b>, avoid danger blocks. Dash <kbd>Space</kbd>. Pause <kbd>P</kbd>.</p>
+        <div class="row">
+          <button class="btn small primary" id="startBtn">▶ Start</button>
+          <button class="btn small" id="pauseBtn">⏸ Pause</button>
+          <button class="btn small" id="resetBtn">↻ Reset</button>
+        </div>
+        <p class="muted">Best: <b id="bestScore">0</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section container reveal">
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="tag"><img src="assets/mail.svg" alt=""> mirelaneziri17@gmail.com</div>
+      <div class="tag"><img src="assets/phone.svg" alt=""> +355 068 312 0956</div>
+      <div class="tag"><img src="assets/map.svg" alt=""> Tirana, Albania</div>
+      <div class="tag"><img src="assets/linkedin.svg" alt=""> <a href="https://www.linkedin.com/in/mirela-neziri-16995924a/" target="_blank">LinkedIn</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">© 2025 Mirela Neziri — All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
